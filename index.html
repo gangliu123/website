@@ -68,11 +68,15 @@
                         <!--Nav Menus-->
                         <nav class="nav-menu">
                             <ul>
-                                <li><a  href="#home" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-user"></i></span>Home </a> </li>
-                                <li><a  href="#about" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-user"></i></span>About Me</a></li>
-                                <li><a  href="Curriculum%20vitae.pdf" target="_blank" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-license"></i></span>cv</a></li>
+                                <li><a href="#home" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-home"></i></span>Home</a></li>
+                                <li><a href="#about" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-user"></i></span>About Me</a></li>
+                                <li><a href="#publications" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-book"></i></span>Publications</a></li>
+                                <li><a href="#work-experience" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-briefcase"></i></span>Work Experience</a></li>
+                                <li><a href="Curriculum_Vitae.pdf" target="_blank" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-license"></i></span>CV</a></li>
+
                             </ul>
                         </nav>
+
 
                         <!--Nav Footer-->
 
@@ -86,125 +90,191 @@
             <div id="main" class="site-main">
 
                 <!--Banner Section Start-->
-                <section id="home" class="banner-section pt-page" style="background-image: url('img/background/home-bg.jpg')">
+                <section id="home" class="banner-section pt-page" style="background-image: url('img/algorithm_climbing.jpg')">
 
-                    <div class="banner-content">
-                        <!--Banner Text-->
-                        <h1 style="color:White;"> Gang Liu </h1>
 
-                        <!--Animated Text-->
-                        <p class="cd-headline clip is-full-width">
-                        <span>I am a </span>
-                        <span class="cd-words-wrapper">
-                            <b class="is-visible">Computational Geometry Scientist</b>
-                            <b>System Developer</b>
-                            <b>a believer of P=NP!</b>
-                        </span>
-                        </p>
-
-                    </div>
 
                 </section>
                 <!--Banner Section End-->
 
 
                 <!--About Section Start-->
-                <section id="about" class="about-section pt-page">
+                <section id="about" class="about-section pt-page" style="background-image: url('img/background/about-me.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                     <div class="section-container">
-                        <!--Page Heading-->
-                        <div class="page-heading">
-                            <span class="icon"><i class="lnr lnr-user"></i></span>
-                            <h2>About Me.</h2>
+                        <!-- Page Heading -->
+                        <div class="page-heading" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span class="icon"><i class="lnr lnr-user"></i></span>
+                                <h2>About Me</h2>
+                            </div>
+                            <div style="text-align: right;">
+                                <p>
+                                    <strong>Email:</strong> <a href="mailto:gangliu@cs.utah.edu">gangliu@cs.utah.edu</a><br>
+                                    <strong>Office:</strong> Room 3450, 50 Central Campus Dr., Salt Lake City, UT 84112<br>
+                                </p>
+                            </div>
                         </div>
 
-                        <!-- About Info Row Start-->
+                        <!-- About Info Row Start -->
                         <div class="row about mb-70">
 
-                            <div class="col-lg-8">
-                                <!--Personal Intro-->
-                                <h4 >
+                            <h3 style="margin-top: 20px; margin-bottom: 10px;">Introduction</h3>
+                            <p>
+                                Hello! I’m Gang Liu, a third-year Ph.D. candidate at the
+                                <a href="https://www.cs.utah.edu/" style="color: cornflowerblue;">Kahlert School of Computing, University of Utah</a>,
+                                conducting research under the supervision of
+                                <a href="https://users.cs.utah.edu/~hwang/" style="color: cornflowerblue;">Dr. Haitao Wang</a>.
+                            </p>
 
-                                   <p> I'm a 2nd year PhD student in the Department of Computer Science at the University of Utah.
-                                       I’m working on computational geometry algorithms with Dr.Wang.</p>
+                            <!-- Educational Background -->
+                            <h3 style="margin-top: 20px; margin-bottom: 10px;">Educational Background</h3>
+                            <p>
+                                I began my <strong>Ph.D. program</strong> in the fall of 2021 at Utah State University.
+                                In the fall of 2022, I transferred to the University of Utah to continue my Ph.D. program, where I am now pursuing research in computational geometry and related fields.
+                            </p>
+                            <p>
+                                Prior to starting my Ph.D., I received my <strong>M.S. in Computer Science</strong> from the University of Utah in 2020, and my <strong>B.S. in Electrical and Computer Engineering</strong> from the University of Utah in 2017.
+                            </p>
 
-                                    <ul>
-                                        <li>I received my M.S. degree in Computer Science from University of Utah, Utah, USA, in 2020.</li>
-                                        <li>I received my B.S. degree  in Electrical and Computer Engineering from University of Utah, Utah, USA, in 2017.</li>
-                                    </ul>
+                            <!-- Research Interests -->
+                            <h3 style="margin-top: 20px; margin-bottom: 10px;">Research Interests</h3>
+                            <p>
+                                My academic interests span <strong>computational geometry</strong>, <strong>algorithms and data structures</strong> in <strong>theoretical computer science</strong>, with a particular focus on coverage and hitting set problems. These topics of my <strong>publications</strong> can be found <a href="#publications" style="color: cornflowerblue;">here</a>. I am also passionate about solving problems in related areas and exploring their practical applications, such as sensor placement, geographic information systems, and resource management.
+                            </p>
 
-                                    Before start my PhD program, I served as a system Developer in the WaltUSA from 2020 to 2021.
-
-                                </h4>
-
-                               <p>
-                                <H4>
-                                    My research interests include computational geometry, algorithms and data structures, theoretical computer science, etc.
-                                </H4>
-                               </p>
-
-                                <!--Signature Image-->
-                                <div class="signature mt-20">
-                                    <p> Algorithm is like climbing！<img src="img/algorithm_climbing.jpg" alt="">
-
-
-                                </div>
-                            </div>
-
-                            <!--Personal Info-->
-                            <div class="col-lg-4">
-                                <div class="about-info">
-                                    <h3 class="mb-20">Personal Information</h3>
-                                    <ul>
-                                        <li><span class="title">Name</span><span class="value">Gang</span></li>
-                                        <li><span class="title">Age</span><span class="value">Who cares?</span></li>
-                                        <li><span class="title">Residence</span><span class="value">ANHUI, CHINA</span></li>
-                                        <li><span class="title">Address</span><span class="value">MEB 3151 </span></li>
-                                        <li><span class="title">Email</span><span class="value">ARTHURLIU1030@GMAIL.COM</span></li>
-                                        <li><span class="title">Phone</span><span class="value">(+1) 435 294 7063</span></li>
-                                    </ul>
-                                    <div class="resume-button mt-30">
-                                        <a class="btn-main" href="Resume_SDE.pdf" target="_blank">Download Resume</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- About Info Row End-->
-
-                        <!--Services Row Start-->
-                        <div class="row services mb-30">
-                            <div class="col-md-12">
-                                <div class="subheading">
-                                    <h3>Programmer Languages</h3>
-                                </div>
-                            </div>
+                            <!-- Professional Experience -->
+                            <h3 style="margin-top: 20px; margin-bottom: 10px;">Work Experience</h3>
+                            <p>
+                                Before starting my Ph.D. program, I gained valuable industry experience working as a <strong>Software Developer</strong> at <strong>WaltUSA</strong> from July 2020 to July 2021. During this time, I contributed to the development of system solutions and worked on a range of projects that enhanced my skills in software design and implementation. Prior to that, I worked as a <strong>Strategy Data Visualization Intern</strong> at <strong>U Health</strong> in Salt Lake City, UT, from May 2019 to August 2019, focusing on data visualization strategies. Earlier, I interned as a <strong>Computer Vision Algorithm Intern</strong> at <strong>IFLYTEK</strong> in Hefei, Anhui, from March 2018 to July 2018, gaining hands-on experience in computer vision technologies. More details can be found <a href="#work-experience" style="color: cornflowerblue;">here</a>.
+                            </p>
 
                         </div>
-                        <!--Services Row End-->
 
-                        <!--Clients Row Start-->
-                        <div class="row clients mb-70">
-                            <div class="col-md-12">
-                                <div class="subheading">
-                                    <h3>Interested Research</h3>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!--Clients Row End-->
-
-                        <!--Testimonials Row Start-->
-                        <div class="row testimonials mb-50">
-                            <div class="col-md-12">
-                                <div class="subheading">
-                                    <h3>Publications</h3>
-                                </div>
-                            </div>
-                            <!--Testimonials Row End-->
-
-                        </div>
                     </div>
+
                 </section>
                 <!--About Section Start-->
+
+                <section id="publications" class="about-section pt-page" style="background-image: url('img/background/about-me.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+
+                    <!-- About Info Row Start -->
+                    <div class="section-container">
+                        <!-- Page Heading -->
+                        <div class="page-heading">
+                            <h2>Publications</h2>
+                            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" style="color: cornflowerblue; margin-left: 10px;">
+                                <i class="fas fa-graduation-cap"></i> <!-- Google Scholar Icon from Font Awesome -->
+                            </a>
+                        </div>
+
+
+                        <!-- Peer-Reviewed Journal Articles -->
+                        <h3>Peer-Reviewed Journal Articles</h3>
+                        <ul>
+                            <br>
+
+                            <li>
+                                Gang Liu and Haitao Wang, “On the Line-Separable Unit-Disk Coverage and Related Problems”,
+                                <i>Computational Geometry: Theory and Applications <STRONG>(CGTA)</STRONG></i>, Vol. 123, Article No. 102122, pages 1–12, 2024.
+                                <a href="https://arxiv.org/abs/2309.03162" target="_blank" style="color: cornflowerblue;">[arXiv]</a>
+                            </li>
+                        </ul>
+
+                        <!-- Peer-Reviewed Conference Papers -->
+                        <h3>Peer-Reviewed Conference Papers</h3>
+                        <ul>
+                            <br>
+
+                            <li>
+                                Gang Liu and Haitao Wang, “On Line-Separable Weighted Unit-Disk Coverage and Related Problems”,
+                                Proceedings of the 49th International Symposium on Mathematical Foundations of Computer Science <STRONG>(MFCS)</STRONG>,
+                                Bratislava, Slovakia, August 2024, pages 70:1-70:16.
+                                <a href="https://arxiv.org/abs/2407.00329" target="_blank" style="color: cornflowerblue;">[arXiv]</a>
+                            </li>
+                            <br>
+
+                            <li>
+                                Gang Liu and Haitao Wang, “Unweighted Geometric Hitting Set for Line-Constrained Disks and Related Problems”,
+                                Proceedings of the 49th International Symposium on Mathematical Foundations of Computer Science <STRONG>(MFCS)</STRONG>,
+                                Bratislava, Slovakia, August 2024, pages 68:1-68:15.
+                                <a href="https://arxiv.org/abs/2407.00331" target="_blank" style="color: cornflowerblue;">[arXiv]</a>
+
+                            </li>
+                            <br>
+
+                            <li>
+                                Gang Liu and Haitao Wang, “On the Line-Separable Unit-Disk Coverage and Related Problems”,
+                                Proceedings of the 34th International Symposium on Algorithms and Computation <STRONG>(ISAAC)</STRONG>,
+                                Kyoto, Japan, December 2023, pages 51:1–51:14.
+                                <a href="https://arxiv.org/abs/2309.03162" target="_blank" style="color: cornflowerblue;">[arXiv]</a>
+
+                            </li>
+                            <br>
+
+                            <li>
+                                Gang Liu and Haitao Wang, “Geometric Hitting Set for Line-Constrained Disks”,
+                                Proceedings of the 18th Algorithms and Data Structures Symposium <STRONG>(WADS)</STRONG>,
+                                Montreal, Canada, August 2023, pages 574–587.
+                                <a href="https://arxiv.org/abs/2305.09045" target="_blank" style="color: cornflowerblue;">[arXiv]</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </section>
+
+                <!-- Work Experience Section Start -->
+                <!-- Work Experience Section Start -->
+                <section id="work-experience" class="about-section pt-page">
+                    <div class="section-container">
+                        <!-- Page Heading -->
+                        <div class="page-heading">
+                            <h2>Work Experience</h2>
+                        </div>
+
+                        <!-- Software Developer at WaltUSA -->
+                        <h3>Software Developer</h3>
+                        <p><strong>WaltUSA</strong>, Logan, UT | Jul 2020 - Jul 2021</p>
+                        <ul>
+                            <li>Developed an interactive industrial system using HTML, JavaScript, Python, PHP, and SQL Server, improving efficiency and enabling easier historical data analysis.</li>
+                            <li>Integrated online sales, production, and inventory management into a visual system, leveraging LSTM models to predict sales and optimize planning.</li>
+                            <li>Applied AI-based techniques for textile defect detection, utilizing image processing and computer vision tools like OpenCV and Mask R-CNN.</li>
+                        </ul>
+
+                        <!-- Strategy Data Visualization Intern at U Health -->
+                        <h3>Strategy Data Visualization - Intern</h3>
+                        <p><strong>U Health</strong>, Salt Lake City, UT | May 2019 - Aug 2019</p>
+                        <ul>
+                            <li>Managed and prepared large-scale medical data for visualization.</li>
+                            <li>Created a data visualization platform using D3.js and Echart.js to reveal insights from physician and patient data.</li>
+                            <li>Developed an interactive web tool for visualizing five years of insurance data for Utah Hospital, aiding in decision-making processes.</li>
+                        </ul>
+
+                        <!-- Computer Vision Algorithm Engineer at iFLYTEK -->
+                        <h3>Computer Vision Algorithm Engineer - Intern</h3>
+                        <p><strong>iFLYTEK</strong>, Hefei, Anhui, China | Mar 2018 - Jul 2018</p>
+                        <ul>
+                            <li>Worked on computer vision projects using TensorFlow, Keras, and OpenCV to improve image processing capabilities.</li>
+                            <li>Enhanced text detection in natural scenes by refining deep learning models such as CTPN and EAST.</li>
+                            <li>Researched deep learning techniques for video analysis, focusing on models like Spatial-Temporal AutoEncoder and C3D.</li>
+                        </ul>
+
+                        <!-- Teaching Assistant Experience -->
+                        <h3>Teaching Assistant</h3>
+                        <br>
+                        <ul>
+                            <li><strong>Advanced Algorithms</strong>, University of Utah – Fall 2022, Fall 2023</li>
+                            <li><strong>Artificial Intelligence</strong>, Utah State University – Fall 2021</li>
+                            <li><strong>Discrete Structures</strong>, University of Utah – Fall 2019, Spring 2020</li>
+                            <li><strong>Digital Signal Processing</strong>, University of Utah – Spring 2019</li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- Work Experience Section End -->
+
+                <!-- Work Experience Section End -->
 
             </div>
             <!--Main End-->
