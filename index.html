@@ -1,328 +1,597 @@
-﻿ <!DOCTYPE html>
-<html lang="en" data-random-animation="false" data-animation="11">
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gang Liu</title>
+    <meta name="description" content="Gang Liu | Assistant Professor of Computer Science at Southern Utah University">
+    <meta name="keywords" content="Gang Liu, computational geometry, algorithms, theoretical computer science, Southern Utah University">
+    <meta name="author" content="Gang Liu">
 
-        <!--Meta Tags-->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="vcard, resume, personal, portfolio, cv, card, responsive" />
-        <meta name="description" content="vCard / Resume / Personal / Portfolio Template" />
-        <meta name="author" content="cosmos-themes" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <!--Page Title-->
-        <title>Gang Liu </title>
+    <style>
+        :root {
+            --bg: #f6f8fc;
+            --card: #ffffff;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --primary: #1d4ed8;
+            --primary-dark: #0f172a;
+            --line: #e5e7eb;
+            --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            --radius: 18px;
+            --max-width: 1100px;
+        }
 
-        <!--Plugins Css-->
-        <link rel="stylesheet" href="css/plugins.css">
-        <!--Main Styles Css-->
-        <link rel="stylesheet" href="css/style-light.css">
-        <!--Color Css-->
-        <link rel="stylesheet" href="css/blue-color.css">
+        * {
+            box-sizing: border-box;
+        }
 
-        <!--Modernizr Js-->
-        <script src="js/modernizr.js"></script>
+        html {
+            scroll-behavior: smooth;
+        }
 
-        <!--Favicons-->
-        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
 
-    </head>
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
 
-    <body>
+        a:hover {
+            text-decoration: underline;
+        }
 
-        <!--Preloader Start-->
-        <div class="preloader">
-            <div class="loader">
-                <!--Your Name-->
-                <h4>Gang Liu</h4>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <!--Preloader End-->
+        .site-shell {
+            min-height: 100vh;
+        }
 
-        <div id="page">
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(255,255,255,0.16), transparent 24%),
+                radial-gradient(circle at 70% 70%, rgba(255,255,255,0.10), transparent 18%),
+                linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
+            color: #ffffff;
+            padding: 72px 24px 56px;
+        }
 
-            <!--Header Start-->
-            <header>
-                <div class="header-content">
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent 90%);
+            pointer-events: none;
+        }
 
-                    <!--Mobile Header-->
-                    <div class="header-mobile">
-                        <a class="header-toggle"><i class="fas fa-bars"></i></a>
-                        <h2>Gang Liu</h2>
-                    </div>
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            right: -120px;
+            top: -110px;
+            border: 2px solid rgba(255,255,255,0.14);
+            border-radius: 28% 72% 63% 37% / 39% 29% 71% 61%;
+            transform: rotate(18deg);
+            pointer-events: none;
+        }
 
-                    <!--Main Header-->
-                    <div class="header-main" data-simplebar>
-                        <div class="image-container">
-                            <h2 class="header-name">Gang Liu</h2>
-                            <img src="img/profile-img.jpg" alt="profile-pic">
-                        </div>
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 0.9fr;
+            gap: 36px;
+            align-items: center;
+        }
 
-                        <!--Nav Menus-->
-                        <nav class="nav-menu">
-                            <ul>
-                                <li><a href="#about" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-user"></i></span>About Me</a></li>
-                                <li><a href="#publications" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-book"></i></span>Publications</a></li>
-                                <li><a href="#work-experience" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-briefcase"></i></span>Work Experience</a></li>
-                                <li><a href="Curriculum_Vitae.pdf" target="_blank" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-license"></i></span>CV</a></li>
+        .hero-left h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2.4rem, 4vw, 4rem);
+            line-height: 1.06;
+            letter-spacing: -0.03em;
+        }
 
-                            </ul>
-                        </nav>
+        .hero-left .role {
+            margin: 0 0 18px;
+            font-size: 1.08rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.92);
+        }
 
+        .hero-left .intro {
+            max-width: 700px;
+            margin: 0;
+            color: rgba(255,255,255,0.88);
+            font-size: 1rem;
+        }
 
-                        <!--Nav Footer-->
+        .hero-right {
+            position: relative;
+        }
 
+        .profile-card {
+            background: rgba(255,255,255,0.10);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 20px;
+            padding: 22px 22px 18px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+
+        .profile-card h2 {
+            margin: 0 0 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.95);
+        }
+
+        .contact-item {
+            margin: 0 0 10px;
+            color: rgba(255,255,255,0.88);
+            font-size: 0.95rem;
+        }
+
+        .contact-label {
+            display: inline-block;
+            min-width: 62px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background: rgba(246, 248, 252, 0.82);
+            border-bottom: 1px solid rgba(229,231,235,0.85);
+        }
+
+        .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            align-items: center;
+            min-height: 64px;
+        }
+
+        .nav-inner a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #334155;
+            padding: 8px 0;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 34px 24px 70px;
+        }
+
+        .section {
+            margin-bottom: 34px;
+        }
+
+        .section-card {
+            background: var(--card);
+            border: 1px solid rgba(229,231,235,0.9);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 28px 28px 24px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 18px;
+            font-size: 1.45rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            background: linear-gradient(135deg, var(--primary), #60a5fa);
+            transform: rotate(45deg);
+            flex: 0 0 auto;
+        }
+
+        .lead {
+            font-size: 1rem;
+            color: #374151;
+            margin-top: 0;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .chip {
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #dbeafe;
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 500;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .subsection-title {
+            margin: 0 0 12px;
+            font-size: 1.03rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .item-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .item-list li {
+            margin-bottom: 10px;
+        }
+
+        .pub-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .pub-list li {
+            margin-bottom: 16px;
+        }
+
+        .teaching-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 6px;
+        }
+
+        .teaching-card {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 14px 16px;
+            font-weight: 500;
+            color: #1f2937;
+        }
+
+        .experience-block {
+            margin-bottom: 24px;
+        }
+
+        .experience-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-title {
+            margin: 0 0 4px;
+            font-size: 1.06rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .job-meta {
+            margin: 0 0 10px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .footer {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px 48px;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 900px) {
+            .hero-inner,
+            .two-col,
+            .teaching-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 58px;
+            }
+
+            .profile-card {
+                max-width: 520px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero,
+            .container,
+            .footer {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .nav-inner {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .section-card {
+                padding: 22px 18px 18px;
+            }
+
+            .hero-left h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-shell">
+
+        <header class="hero">
+            <div class="hero-inner">
+                <div class="hero-left">
+                    <h1>Gang Liu</h1>
+                    <p class="role">Assistant Professor of Computer Science, Southern Utah University</p>
+                    <p class="intro">
+                        I work in theoretical computer science, with research interests in computational geometry,
+                        algorithms, data structures, and geometric optimization, especially coverage and hitting set problems.
+                    </p>
+                </div>
+
+                <div class="hero-right">
+                    <div class="profile-card">
+                        <h2>Contact</h2>
+                        <p class="contact-item"><span class="contact-label">Email</span> <a href="mailto:gangliu@suu.edu" style="color:#ffffff;">gangliu@suu.edu</a></p>
+                        <p class="contact-item"><span class="contact-label">Office</span> ELC 418</p>
+                        <p class="contact-item"><span class="contact-label">Location</span> Southern Utah University, Cedar City, UT</p>
+                        <p class="contact-item"><span class="contact-label">Research</span> Computational Geometry, TCS, Algorithms</p>
                     </div>
                 </div>
-            </header>
-            <!--Header End-->
+            </div>
+        </header>
 
+        <nav class="nav-bar">
+            <div class="nav-inner">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#teaching">Teaching</a>
+                <a href="#service">Service</a>
+                <a href="#experience">Experience</a>
+                <a href="Curriculum_Vitae.pdf" target="_blank">CV</a>
+            </div>
+        </nav>
 
-            <!--Main Start-->
-            <div id="main" class="site-main">
+        <main class="container">
 
-                <!--Banner Section Start-->
+            <section id="about" class="section">
+                <div class="section-card">
+                    <h2 class="section-title">About</h2>
+                    <p class="lead">
+                        I am an Assistant Professor of Computer Science at Southern Utah University.
+                        My work focuses on theoretical computer science, especially computational geometry
+                        and related algorithmic problems.
+                    </p>
+                    <p>
+                        I am completing my Ph.D. in Computer Science at the
+                        <a href="https://www.cs.utah.edu/" target="_blank">Kahlert School of Computing, University of Utah</a>,
+                        where I conduct research under the supervision of
+                        <a href="https://users.cs.utah.edu/~hwang/" target="_blank">Dr. Haitao Wang</a>.
+                        I began my Ph.D. studies at Utah State University in Fall 2021 and transferred to the University of Utah in Fall 2022.
+                    </p>
+                    <p>
+                        Prior to my doctoral studies, I received my <strong>M.S. in Computer Science</strong> from the University of Utah in 2020
+                        and my <strong>B.S. in Electrical and Computer Engineering</strong> from the University of Utah in 2017.
+                    </p>
+                </div>
+            </section>
 
-
-                </section>
-                <!--Banner Section End-->
-
-
-                <!--About Section Start-->
-                <section id="about" class="about-section pt-page" style="background-image: url('img/background/about-me.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                    <div class="section-container">
-                        <!-- Page Heading -->
-                        <div class="page-heading" style="display: flex; justify-content: space-between; align-items: center;">
-                            <div>
-                                <span class="icon"><i class="lnr lnr-user"></i></span>
-                                <h2>About Me</h2>
-                            </div>
-                            <div style="text-align: right;">
-                                <p>
-                                    <strong>Email:</strong> <a href="mailto:gangliu@cs.utah.edu">gangliu@cs.utah.edu</a><br>
-                                    <strong>Office:</strong> Room 3450, 50 Central Campus Dr., Salt Lake City, UT 84112<br>
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- About Info Row Start -->
-                        <div class="row about mb-70">
-
-                            <h3 style="margin-top: 20px; margin-bottom: 10px;">Introduction</h3>
-                            <p>
-                                Hello! I’m Gang Liu, a fourth-year Ph.D. candidate at the
-                                <a href="https://www.cs.utah.edu/" style="color: cornflowerblue;">Kahlert School of Computing, University of Utah</a>,
-                                conducting research under the supervision of
-                                <a href="https://users.cs.utah.edu/~hwang/" style="color: cornflowerblue;">Dr. Haitao Wang</a>.
-                            </p>
-
-                            <!-- Educational Background -->
-                            <h3 style="margin-top: 20px; margin-bottom: 10px;">Educational Background</h3>
-                            <p>
-                                I began my <strong>Ph.D. program</strong> in the fall of 2021 at Utah State University.
-                                In the fall of 2022, I transferred to the University of Utah to continue my Ph.D. program, where I am now pursuing research in computational geometry and related fields.
-                            </p>
-                            <p>
-                                Prior to starting my Ph.D., I received my <strong>M.S. in Computer Science</strong> from the University of Utah in 2020, and my <strong>B.S. in Electrical and Computer Engineering</strong> from the University of Utah in 2017.
-                            </p>
-
-                            <!-- Research Interests -->
-                            <h3 style="margin-top: 20px; margin-bottom: 10px;">Research Interests</h3>
-                            <p>
-
-                                My academic research interest is in theoretical computer science <strong>(TCS)</strong>, with the main focus on <strong>computational geometry</strong>, <strong>algorithms and data structures</strong>. More specifically, I am interested in coverage and hitting set problems. These topics of my <strong>publications</strong> can be found <a href="#publications" style="color: cornflowerblue;">here</a>. I am also passionate about solving problems in related areas and exploring their practical applications, such as sensor placement, geographic information systems, and resource management.
-                            </p>
-
-                            <!-- Professional Experience -->
-                            <h3 style="margin-top: 20px; margin-bottom: 10px;">Work Experience</h3>
-                            <p>
-                                Before starting my Ph.D. program, I gained valuable industry experience working as a <strong>Software Developer</strong>
-                                at <strong>WaltUSA</strong> from July 2020 to July 2021. During this time,
-                                I contributed to the development of system solutions and worked on a range of projects that enhanced my skills
-                                in software design and implementation. Prior to that, I worked as a <strong>Strategy Data Visualization Intern</strong> at
-                                <strong>U Health</strong> in Salt Lake City, UT, from May 2019 to August 2019. Earlier, I interned as a <strong>Computer
-                                Vision Algorithm Intern</strong> at <strong>IFLYTEK</strong> in Hefei, Anhui, from March 2018 to July 2018,
-                                gaining hands-on experience in computer vision technologies. More details can be found <a href="#work-experience" style="color: cornflowerblue;">here</a>.
-                            </p>
-
-                        </div>
-
+            <section id="research" class="section">
+                <div class="section-card">
+                    <h2 class="section-title">Research Interests</h2>
+                    <p class="lead">
+                        My research is centered on geometric and combinatorial problems in theoretical computer science.
+                    </p>
+                    <div class="chips">
+                        <span class="chip">Computational Geometry</span>
+                        <span class="chip">Algorithms</span>
+                        <span class="chip">Data Structures</span>
+                        <span class="chip">Theoretical Computer Science</span>
+                        <span class="chip">Hitting Set Problems</span>
+                        <span class="chip">Coverage Problems</span>
+                        <span class="chip">Geometric Optimization</span>
                     </div>
+                </div>
+            </section>
 
-                </section>
-                <!--About Section Start-->
+            <section id="publications" class="section">
+                <div class="section-card">
+                    <h2 class="section-title">Publications</h2>
 
-                <section id="publications" class="about-section pt-page" style="background-image: url('img/background/about-me.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-
-
-                    <!-- About Info Row Start -->
-                    <div class="section-container">
-                        <!-- Page Heading -->
-                        <div class="page-heading">
-                            <h2>Publications</h2>
-                            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" style="color: cornflowerblue; margin-left: 10px;">
-                                <i class="fas fa-graduation-cap"></i> <!-- Google Scholar Icon from Font Awesome -->
-                            </a>
+                    <div class="two-col">
+                        <div>
+                            <h3 class="subsection-title">Peer-Reviewed Journal Articles</h3>
+                            <ol class="pub-list">
+                                <li>
+                                    Gang Liu and Haitao Wang, “Computing Hitting Sets for Half-Planes,”
+                                    <em>Journal of Computational Geometry (JoCG)</em>, Vol. 17, No. 1, pp. 37–60, 2026.
+                                </li>
+                                <li>
+                                    Gang Liu and Haitao Wang, “On Line-Separable Weighted Unit-Disk Coverage and Related Problems,”
+                                    <em>Computational Geometry: Theory and Applications (CGTA)</em>, Vol. 129, Article No. 102188, pp. 1–11, 2025.
+                                </li>
+                                <li>
+                                    Gang Liu and Haitao Wang, “Geometric Hitting Set for Line-Constrained Disks and Related Problems,”
+                                    <em>Journal of Computational Geometry (JoCG)</em>, Vol. 16, No. 1, pp. 108–140, 2025.
+                                </li>
+                                <li>
+                                    Gang Liu and Haitao Wang, “On the Line-Separable Unit-Disk Coverage and Related Problems,”
+                                    <em>Computational Geometry: Theory and Applications (CGTA)</em>, Vol. 123, Article No. 102122, pp. 1–12, 2024.
+                                    <a href="https://arxiv.org/abs/2309.03162" target="_blank">[arXiv]</a>
+                                </li>
+                            </ol>
                         </div>
 
+                        <div>
+                            <h3 class="subsection-title">Peer-Reviewed Conference Papers</h3>
+                            <ol class="pub-list">
+                                <li>
+                                    Gang Liu and Haitao Wang, “An Optimal Algorithm for Half-Plane Hitting Set,”
+                                    in <em>Proceedings of the 2025 Symposium on Simplicity in Algorithms (SOSA)</em>,
+                                    New Orleans, Louisiana, USA, January 2025, pp. 509–516.
+                                    <a href="https://arxiv.org/abs/2501.02195" target="_blank">[arXiv]</a>
+                                </li>
+                                <li>
+                                    Gang Liu and Haitao Wang, “On Line-Separable Weighted Unit-Disk Coverage and Related Problems,”
+                                    in <em>Proceedings of the 49th International Symposium on Mathematical Foundations of Computer Science (MFCS)</em>,
+                                    Bratislava, Slovakia, August 2024, pp. 70:1–70:16.
+                                    <a href="https://arxiv.org/abs/2407.00329" target="_blank">[arXiv]</a>
+                                </li>
+                                <li>
+                                    Gang Liu and Haitao Wang, “Unweighted Geometric Hitting Set for Line-Constrained Disks and Related Problems,”
+                                    in <em>Proceedings of the 49th International Symposium on Mathematical Foundations of Computer Science (MFCS)</em>,
+                                    Bratislava, Slovakia, August 2024, pp. 68:1–68:15.
+                                    <a href="https://arxiv.org/abs/2407.00331" target="_blank">[arXiv]</a>
+                                </li>
+                                <li>
+                                    Gang Liu and Haitao Wang, “On the Line-Separable Unit-Disk Coverage and Related Problems,”
+                                    in <em>Proceedings of the 34th International Symposium on Algorithms and Computation (ISAAC)</em>,
+                                    Kyoto, Japan, December 2023, pp. 51:1–51:14.
+                                    <a href="https://arxiv.org/abs/2309.03162" target="_blank">[arXiv]</a>
+                                </li>
+                                <li>
+                                    Gang Liu and Haitao Wang, “Geometric Hitting Set for Line-Constrained Disks,”
+                                    in <em>Proceedings of the 18th Algorithms and Data Structures Symposium (WADS)</em>,
+                                    Montreal, Canada, August 2023, pp. 574–587.
+                                    <a href="https://arxiv.org/abs/2305.09045" target="_blank">[arXiv]</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                        <!-- Peer-Reviewed Journal Articles -->
-                        <h3>Peer-Reviewed Journal Articles</h3>
-                        <ul>
-                            <br>
+            <section id="teaching" class="section">
+                <div class="section-card">
+                    <h2 class="section-title">Teaching</h2>
+                    <div class="teaching-grid">
+                        <div class="teaching-card">Object-Oriented Programming</div>
+                        <div class="teaching-card">Logic, Thinking, and Design</div>
+                        <div class="teaching-card">Computer Engineering</div>
+                        <div class="teaching-card">Theory of Computation</div>
+                        <div class="teaching-card">Artificial Intelligence</div>
+                    </div>
+                </div>
+            </section>
 
-                            <li>
-                                Gang Liu and Haitao Wang, “On the Line-Separable Unit-Disk Coverage and Related Problems”,
-                                <i>Computational Geometry: Theory and Applications <STRONG>(CGTA)</STRONG></i>, Vol. 123, Article No. 102122, pages 1–12, 2024.
-                                <a href="https://arxiv.org/abs/2309.03162" target="_blank" style="color: cornflowerblue;">[arXiv]</a>
-                            </li>
-                            <br>
+            <section id="service" class="section">
+                <div class="section-card">
+                    <h2 class="section-title">Professional Service</h2>
+                    <ul class="item-list">
+                        <li>Reviewer for theoretical computer science and algorithms venues, including <strong>Theoretical Computer Science (TCS)</strong>, <strong>ESA</strong>, and <strong>COCOON</strong>.</li>
+                    </ul>
+                </div>
+            </section>
 
-                              <li>
-                                Gang Liu and Haitao Wang, “Geometric Hitting Set for Line-Constrained Disks and Related Problems”,
-                                <i>Journal of Computational Geometry  <STRONG>(JOCG)</STRONG></i>, Vol. 16 No. 1, pages 108--140, 2025.
-                            </li>
-			    <br>
-                              <li>
-                                Gang Liu and Haitao Wang, “On Line-Separable Weighted Unit-Disk Coverage and Related Problems”,
-                                <i>Computational Geometry: Theory and Applications <STRONG>(CGTA)</STRONG></i>，Volume 129,  Article No. 102188, pages 1–11 2025.
-                            </li>
-                        </ul>
+            <section id="experience" class="section">
+                <div class="section-card">
+                    <h2 class="section-title">Experience</h2>
 
-                        <!-- Peer-Reviewed Conference Papers -->
-                        <h3>Peer-Reviewed Conference Papers</h3>
- 			
-
-                        <ul>
-			<br>
-			<li>
-				Gang Liu and Haitao Wang, "An optimal algorithm for half-plane hitting set", In 2025 Symposium
-				on Simplicity in Algorithms <STRONG>(SOSA)</STRONG>, New Orleans, Louisiana, U.S. January 2025, pages 509–516.
-                                <a href="https://arxiv.org/abs/2501.02195" target="_blank" style="color: cornflowerblue;">[arXiv]</a>
-                            </li>
-                            <br>
-                           
-                            <li>
-                                Gang Liu and Haitao Wang, “On Line-Separable Weighted Unit-Disk Coverage and Related Problems”,
-                                Proceedings of the 49th International Symposium on Mathematical Foundations of Computer Science <STRONG>(MFCS)</STRONG>,
-                                Bratislava, Slovakia, August 2024, pages 70:1-70:16.
-                                <a href="https://arxiv.org/abs/2407.00329" target="_blank" style="color: cornflowerblue;">[arXiv]</a>
-                            </li>
-                            <br>
-
-                            <li>
-                                Gang Liu and Haitao Wang, “Unweighted Geometric Hitting Set for Line-Constrained Disks and Related Problems”,
-                                Proceedings of the 49th International Symposium on Mathematical Foundations of Computer Science <STRONG>(MFCS)</STRONG>,
-                                Bratislava, Slovakia, August 2024, pages 68:1-68:15.
-                                <a href="https://arxiv.org/abs/2407.00331" target="_blank" style="color: cornflowerblue;">[arXiv]</a>
-
-                            </li>
-                            <br>
-
-                            <li>
-                                Gang Liu and Haitao Wang, “On the Line-Separable Unit-Disk Coverage and Related Problems”,
-                                Proceedings of the 34th International Symposium on Algorithms and Computation <STRONG>(ISAAC)</STRONG>,
-                                Kyoto, Japan, December 2023, pages 51:1–51:14.
-                                <a href="https://arxiv.org/abs/2309.03162" target="_blank" style="color: cornflowerblue;">[arXiv]</a>
-
-                            </li>
-                            <br>
-
-                            <li>
-                                Gang Liu and Haitao Wang, “Geometric Hitting Set for Line-Constrained Disks”,
-                                Proceedings of the 18th Algorithms and Data Structures Symposium <STRONG>(WADS)</STRONG>,
-                                Montreal, Canada, August 2023, pages 574–587.
-                                <a href="https://arxiv.org/abs/2305.09045" target="_blank" style="color: cornflowerblue;">[arXiv]</a>
-                            </li>
+                    <div class="experience-block">
+                        <h3 class="job-title">Assistant Professor of Computer Science</h3>
+                        <p class="job-meta"><strong>Southern Utah University</strong>, Cedar City, UT | 2025 – Present</p>
+                        <ul class="item-list">
+                            <li>Teaching and mentoring students in computer science and related areas.</li>
+                            <li>Conducting research in computational geometry, algorithms, and theoretical computer science.</li>
+                            <li>Developing course materials and supporting departmental academic initiatives.</li>
                         </ul>
                     </div>
 
-
-
-                </section>
-
-                <!-- Work Experience Section Start -->
-                <!-- Work Experience Section Start -->
-                <section id="work-experience" class="about-section pt-page">
-                    <div class="section-container">
-                        <!-- Page Heading -->
-                        <div class="page-heading">
-                            <h2>Work Experience</h2>
-                        </div>
-
-                        <!-- Software Developer at WaltUSA -->
-                        <h3>Software Developer</h3>
-                        <p><strong>WaltUSA</strong>, Logan, UT | Jul 2020 - Jul 2021</p>
-                        <ul>
+                    <div class="experience-block">
+                        <h3 class="job-title">Software Developer</h3>
+                        <p class="job-meta"><strong>WaltUSA</strong>, Logan, UT | Jul 2020 – Jul 2021</p>
+                        <ul class="item-list">
                             <li>Developed an interactive industrial system using HTML, JavaScript, Python, PHP, and SQL Server, improving efficiency and enabling easier historical data analysis.</li>
                             <li>Integrated online sales, production, and inventory management into a visual system, leveraging LSTM models to predict sales and optimize planning.</li>
                             <li>Applied AI-based techniques for textile defect detection, utilizing image processing and computer vision tools like OpenCV and Mask R-CNN.</li>
                         </ul>
+                    </div>
 
-                        <!-- Strategy Data Visualization Intern at U Health -->
-                        <h3>Strategy Data Visualization - Intern</h3>
-                        <p><strong>U Health</strong>, Salt Lake City, UT | May 2019 - Aug 2019</p>
-                        <ul>
+                    <div class="experience-block">
+                        <h3 class="job-title">Strategy Data Visualization Intern</h3>
+                        <p class="job-meta"><strong>U Health</strong>, Salt Lake City, UT | May 2019 – Aug 2019</p>
+                        <ul class="item-list">
                             <li>Managed and prepared large-scale medical data for visualization.</li>
                             <li>Created a data visualization platform using D3.js and Echart.js to reveal insights from physician and patient data.</li>
                             <li>Developed an interactive web tool for visualizing five years of insurance data for Utah Hospital, aiding in decision-making processes.</li>
                         </ul>
+                    </div>
 
-                        <!-- Computer Vision Algorithm Engineer at iFLYTEK -->
-                        <h3>Computer Vision Algorithm Engineer - Intern</h3>
-                        <p><strong>iFLYTEK</strong>, Hefei, Anhui, China | Mar 2018 - Jul 2018</p>
-                        <ul>
+                    <div class="experience-block">
+                        <h3 class="job-title">Computer Vision Algorithm Engineer Intern</h3>
+                        <p class="job-meta"><strong>iFLYTEK</strong>, Hefei, Anhui, China | Mar 2018 – Jul 2018</p>
+                        <ul class="item-list">
                             <li>Worked on computer vision projects using TensorFlow, Keras, and OpenCV to improve image processing capabilities.</li>
                             <li>Enhanced text detection in natural scenes by refining deep learning models such as CTPN and EAST.</li>
                             <li>Researched deep learning techniques for video analysis, focusing on models like Spatial-Temporal AutoEncoder and C3D.</li>
                         </ul>
+                    </div>
 
-                        <!-- Teaching Assistant Experience -->
-                        <h3>Teaching Assistant</h3>
-                        <br>
-                        <ul>
-                            <li><strong>Advanced Algorithms (CS6150) </strong>, University of Utah – Fall 2022, Fall 2023</li>
-                            <li><strong>Artificial Intelligence (CS5600) </strong>, Utah State University – Fall 2021</li>
-                            <li><strong>Discrete Structures (CS2100) </strong>, University of Utah – Fall 2019, Spring 2020</li>
-                            <li><strong>Digital Signal Processing (ECE5530/6530) </strong>, University of Utah – Spring 2019</li>
+                    <div class="experience-block">
+                        <h3 class="job-title">Teaching Assistant</h3>
+                        <ul class="item-list">
+                            <li><strong>Advanced Algorithms (CS 6150)</strong>, University of Utah – Fall 2022, Fall 2023</li>
+                            <li><strong>Artificial Intelligence (CS 5600)</strong>, Utah State University – Fall 2021</li>
+                            <li><strong>Discrete Structures (CS 2100)</strong>, University of Utah – Fall 2019, Spring 2020</li>
+                            <li><strong>Digital Signal Processing (ECE 5530/6530)</strong>, University of Utah – Spring 2019</li>
                         </ul>
                     </div>
-                </section>
-                <!-- Work Experience Section End -->
+                </div>
+            </section>
 
-                <!-- Work Experience Section End -->
+        </main>
 
-            </div>
-            <!--Main End-->
-
-        </div>
-
-        <!--Ajax Portfolio Container Start-->
-        <div class="ajax-portfolio-popup">
-            <span class="ajax-loader"></span>
-            <div class="navigation-wrap">
-                <span class="popup-close"><i class="fas fa-times-circle"></i></span>
-            </div>
-            <div class="content-wrap">
-                <div class="popup-content"></div>
-            </div>
-        </div>
-        <!--Ajax Portfolio Container End-->
-
-        <!--Jquery JS-->
-        <script src="js/jquery.min.js"></script>
-        <!--Plugins JS-->
-        <script src="js/plugins.min.js"></script>
-        <!--Google Map Api-->
-        <script src="http://ditu.google.cn/maps/api/js?sensor=false"></script>
-        <!--Site Main JS-->
-        <script src="js/main.js"></script>
-    </body>
+        <footer class="footer">
+            <p>© Gang Liu. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
 </html>
